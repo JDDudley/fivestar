@@ -5,7 +5,7 @@
         <v-icon color="white">menu</v-icon>
       </v-btn>
       <!--<img src="./assets/logo_nav.png" id="nav-logo" alt="FiveStar Service Pros">-->
-      <v-toolbar-title class="nav-title hidden-xs-only">Five Star Service Pros</v-toolbar-title>
+      <v-toolbar-title class="nav-title">Five Star<span class="hidden-xs-only"> Service Pros</span></v-toolbar-title>
       <v-spacer></v-spacer>
       <div class="hidden-md-and-down">
         <!-- Home button -->
@@ -29,7 +29,7 @@
     </v-toolbar>
     <v-content>
       <!-- drawer -->
-      <v-navigation-drawer dark clipped disable-route-watcher absolute v-model="drawer" app>
+      <v-navigation-drawer dark clipped disable-route-watcher fixed v-model="drawer" app>
         <v-list>
           <v-list-tile href="/#/home" @click.stop="drawer = !drawer">
             <v-list-tile-action>
@@ -121,12 +121,18 @@
     <v-footer color="primary" class="bottom-bar" clipped-left app>
       <v-layout row wrap>
         <!-- <v-flex xs12 md4> -->
-          <v-card class="bottom-card" xs12 md4>
+          <v-card class="bottom-card" xs12 sm6>
             <v-card-title id="contact-title"><v-btn color="primary" dark href="/#/contact" class="full-width">Contact Five Star</v-btn></v-card-title>
             <v-card-text>
-              <v-btn raised color="white" class="full-width" href="tel:+1-208-270-0837"><v-icon color="primary">phone</v-icon> (208) 270-0837</v-btn>
+              <v-btn raised color="white" class="full-width" href="tel:+1-208-270-0837">
+                <v-icon color="primary">phone</v-icon>
+                <span class="hidden-xs-only"> (208) 270-0837</span>
+              </v-btn>
               <br>
-              <v-btn raised color="white" class="full-width" href="mailto:service@fivestarservicepros.com"><v-icon color="primary">email</v-icon>service@fivestarservicepros.com</v-btn>
+              <v-btn raised color="white" class="full-width" href="mailto:service@fivestarservicepros.com">
+                <v-icon color="primary">email</v-icon>
+                <span class="hidden-xs-only"> service@fivestarservicepros.com</span>
+              </v-btn>
             </v-card-text>
             <!-- <v-card-media>
               <v-icon light x-large>phone</v-icon>
@@ -221,7 +227,7 @@ body {
   max-width: 100%;
 }
 .nav-title {
-  font-family: 'Roboto','Futura';
+  font-family: 'Roboto','Futura',sans-serif;
   font-size: 2em;
   color: white;
   font-variant: small-caps;
