@@ -160,6 +160,9 @@
           </v-card>
         </v-flex>
       </v-layout>
+      <v-snackbar :timeout="successAppTimeout" color="success" v-model="successAppSnack">
+        Thank you for contacting us, we'll reach out as quickly as we can.
+      </v-snackbar>
       <!--<p class="full-width center">&copy; 2018, Five Star Service Pros</p>-->
     </v-footer>
   </v-app>
@@ -230,8 +233,8 @@ export default {
       //   route: '/services/mobile-home-plumbing'
       // }
     ],
-    successSnack: false,
-    successTimeout: 5000
+    successAppSnack: false,
+    successAppTimeout: 5000
   }),
   methods: {
     appointmentSubmit () {
@@ -241,7 +244,7 @@ export default {
           name: this.name,
           phone: this.phone
         })
-        this.successSnack = true
+        this.successAppSnack = true
       }
     }
   }
