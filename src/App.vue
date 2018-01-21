@@ -182,7 +182,7 @@ export default {
     ],
     phone: '',
     phoneRules: [
-      (v) => !!v || 'Phone number is required so Five Star can contact you in a timely manner.'
+      (v) => !!v || 'Phone number is required'
     ],
     areas: [
       {
