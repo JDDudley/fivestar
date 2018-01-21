@@ -204,19 +204,19 @@ export default {
       services: [
       {
         title: 'Drain Cleaning',
-        route: '#/services/drain-cleaning'
+        route: '/services/drain-cleaning'
       },
       {
         title: 'Residential Plumbing',
-        route: '#/services/residential-plumbing'
+        route: '/services/residential-plumbing'
       },
       {
         title: 'Commercial Plumbing',
-        route: '#/services/commercial-plumbing'
+        route: '/services/commercial-plumbing'
       }
       // {
       //   title: 'Mobile Home Plumbing',
-      //   route: '#/services/mobile-home-plumbing'
+      //   route: '/services/mobile-home-plumbing'
       // }
     ]
   }),
