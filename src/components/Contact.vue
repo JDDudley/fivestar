@@ -34,11 +34,16 @@
         <v-btn @click="submit" :disabled="!valid" color="primary">submit</v-btn>
         <v-btn @click="clear" color="primary">clear</v-btn>
       </v-form>
+      <v-snackbar :timeout="successTimeout" color="success" v-model="successSnack">
+        Thank you for contacting us, we'll reach out as quickly as we can.
+      </v-snackbar>
     </div>
   </div>
 </template>
 
 <script>
+  import axios from 'axios'
+  
   export default {
     name: 'contact',
     data: () => ({
@@ -63,19 +68,20 @@
         'Commercial Plumbing',
         // 'Mobile Home Plumbing',
         'Other'
-      ]
+      ],
+      successSnack: false,
+      successTimeout: 5000
     }),
     methods: {
       submit () {
         if (this.$refs.form.validate()) {
-          // Native form submission is not yet supported
-          axios.post('/api/submit', {
+          axios.post('//formspree.io/service@fivestarboise.com', {
             name: this.name,
             email: this.email,
             phone: this.phone,
-            service: this.service,
-            checkbox: this.checkbox
+            service: this.service
           })
+          this.successSnack = true
         }
       },
       clear () {

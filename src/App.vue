@@ -129,9 +129,9 @@
                 <span class="hidden-sm-and-up"> Call</span>
               </v-btn>
               <br>
-              <v-btn raised color="white" class="full-width" href="mailto:service@fivestarservicepros.com">
+              <v-btn raised color="white" class="full-width" href="mailto:service@fivestarboise.com">
                 <v-icon color="primary">email</v-icon>
-                <span class="hidden-xs-only"> service@fivestarservicepros.com</span>
+                <span class="hidden-xs-only"> service@fivestarboise.com</span>
                 <span class="hidden-sm-and-up"> Email</span>
               </v-btn>
             </v-card-text>
@@ -154,7 +154,7 @@
                   class="full-width"
                   :rules="phoneRules"
                 ></v-text-field>
-                <v-btn color="primary" class="full-width" @click="appointmentSubmit" dark href="/appointments">Set Up Appointment</v-btn>
+                <v-btn color="primary" class="full-width" @click="appointmentSubmit" dark>Set Up Appointment</v-btn>
               </v-form>
             </v-card-title>
           </v-card>
@@ -166,10 +166,21 @@
 </template>
 
 <script>
+const axios = require('axios')
+
 export default {
   name: 'app',
   data: () => ({
     drawer: null,
+    valid: true,
+    name: '',
+    nameRules: [
+      (v) => !!v || 'Name is required'
+    ],
+    phone: '',
+    phoneRules: [
+      (v) => !!v || 'Phone number is required so Five Star can contact you in a timely manner.'
+    ],
     areas: [
       {
         title: 'Boise',
@@ -218,18 +229,19 @@ export default {
       //   title: 'Mobile Home Plumbing',
       //   route: '/services/mobile-home-plumbing'
       // }
-    ]
+    ],
+    successSnack: false,
+    successTimeout: 5000
   }),
   methods: {
     appointmentSubmit () {
       if (this.$refs.appointmentForm.validate()) {
         // Native form submission is not yet supported
-        axios.post('/api/submit', {
+        axios.post('//formspree.io/service@fivestarboise.com', {
           name: this.name,
-          email: this.email,
-          select: this.select,
-          checkbox: this.checkbox
+          phone: this.phone
         })
+        this.successSnack = true
       }
     }
   }
