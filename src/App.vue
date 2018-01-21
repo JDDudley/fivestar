@@ -9,7 +9,7 @@
       <v-spacer></v-spacer>
       <div class="hidden-md-and-down">
         <!-- Home button -->
-        <v-btn color="primary" dark href="/home">Home</v-btn>
+        <v-btn color="primary" dark href="/">Home</v-btn>
         <!-- services dropdown -->
         <v-menu offset-y>
           <v-btn color="primary" dark slot="activator">Services</v-btn>
