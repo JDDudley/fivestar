@@ -2,7 +2,7 @@
   <div class="component center">
     <h1>Schedule Your Appointment Today</h1>
     <br><br>
-    <p>Five Star Service Pros is committed to servicing your plumbing and drain cleaning needs in a timely and cost-efficient manner. Contact us today to set up your free quote!</p>
+    <p>Five Star Service Pros is committed to servicing your plumbing and drain cleaning needs in a timely and cost-efficient manner. Set up your appointment now!</p>
     <div class="form-div">
       <v-form v-model="valid" ref="form" lazy-validation>
         <v-text-field

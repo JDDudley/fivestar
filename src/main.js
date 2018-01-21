@@ -22,7 +22,59 @@ Vue.use(Vuetify, {
   }
 })
 
-// Vue.use(Vuex)
+// Store data
+// let storeData = {
+//   areas: [
+//     {
+//       title: 'Boise',
+//       neighborhoods: [
+//         'Boise Bench',
+//         'Boise Heights',
+//         'Boise State University',
+//         'Central Bench',
+//         'Columbia Village',
+//         'Depot Bench',
+//         'Downtown Boise',
+//         'East End',
+//         'Garden City',
+//         'Harris Ranch',
+//         'Hidden Springs',
+//         'Highlands',
+//         'Hillcrest',
+//         'North End',
+//         'Northeast Boise',
+//         'Northwest Boise',
+//         'Quail Ridge',
+//         'South Boise',
+//         'South Boise Village',
+//         'Southeast Boise',
+//         'Sunset',
+//         'Warm Springs',
+//         'Warm Springs Mesa',
+//         'West Boise',
+//         'West End'
+//       ]
+//     }],
+//     services: [
+//     {
+//       title: 'Drain Cleaning',
+//       route: '#/services/drain-cleaning'
+//     },
+//     {
+//       title: 'Residential Plumbing',
+//       route: '#/services/residential-plumbing'
+//     },
+//     {
+//       title: 'Commercial Plumbing',
+//       route: '#/services/commercial-plumbing'
+//     }
+//     // {
+//     //   title: 'Mobile Home Plumbing',
+//     //   route: '#/services/mobile-home-plumbing'
+//     // }
+//   ]
+// }
+
 router.beforeEach((to, from, next) => {
   document.title = to.meta.title
   next()
@@ -32,6 +84,7 @@ router.beforeEach((to, from, next) => {
 new Vue({
   el: '#app',
   router,
+  // data: storeData,
   template: '<App/>',
   components: { App }
 })

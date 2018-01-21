@@ -6,36 +6,13 @@
       <h1>Plumbing and Drain Cleaning Experts</h1>
       <p>Welcome to Five Star Service Pros, the most reliable and affordable choice for your plumbing and drain cleaning needs in Boise and surrounding areas.</p>
     </div>
-    <div id="areas-served">
-      <h1>Areas Served</h1>
-      <!-- grouped list-->
-      
-      <!--<v-list dense>
-        <v-list-group v-for="area in areas" :value="area.active" v-bind:key="area.title">
-          <v-list-tile-title>{{ area.title }}</v-list-tile-title>
-          <v-list-tile-action><v-icon>keyboard_arrow_down</v-icon></v-list-tile-action>
-          <v-list-tile v-for="neighborhood in area.neighborhoods" v-bind:key="neighborhood" @click="">
-            <v-list-tile-title>{{ neighborhood }}</v-list-tile-title>
-          </v-list-tile>
-        </v-list-group>
-      </v-list>-->
-      
-      <!-- v-list -->
-      <!--<v-list dense>
-        <v-list-tile v-for="neighborhood in areas[0].neighborhoods" v-bind:key="neighborhood">
-          <v-list-title>{{ neighborhood }}</v-list-title>
-        </v-list-tile>
-      </v-list>-->
-      
-      <!-- list -->
-      <!--<ul class="areas">
-        <li v-for="neighborhood in areas[0].neighborhoods">{{ neighborhood }}</li>
-      </ul>-->
-
+    <!-- Areas Served -->
+    <div class="areas-served" v-for="area in areas" :key="area.title">
+      <h1>Areas Served in {{ area.title }}</h1>
       <!-- grid -->
       <v-container grid-list-md text-xs-center>
         <v-layout row wrap>
-          <v-flex xs12 sm6 md3 xl2 v-for="neighborhood in areas[0].neighborhoods">
+          <v-flex xs12 sm6 md3 xl2 v-for="neighborhood in area.neighborhoods" :key="neighborhood">
             {{ neighborhood }}
           </v-flex>
         </v-layout>
@@ -45,6 +22,8 @@
 </template>
 
 <script>
+  import store from '../store'
+  
 export default {
   name: 'Home',
   data () {
@@ -80,14 +59,7 @@ export default {
             'West Boise',
             'West End'
           ]
-        }
-        // {
-        //   title: 'Caldwell'
-        // },
-        // {
-        //   title: 'Nampa'
-        // }
-      ]
+        }]
     }
   }
 }

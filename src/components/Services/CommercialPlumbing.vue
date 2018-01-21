@@ -18,7 +18,7 @@
             </v-card-title>
             <v-card-text>
               <ul class="no-bullet-list">
-                <li v-for="item in specificService.list">{{ item }}</li>
+                <li v-for="item in specificService.list"><v-divider></v-divider>{{ item }}</li>
               </ul>
             </v-card-text>
           </v-card>

@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-toolbar color="accent" class="top-bar" clipped-left fixed app>
+    <v-toolbar color="black" class="top-bar" clipped-left fixed app>
       <v-btn color="primary" icon raised @click.stop="drawer = !drawer">
         <v-icon color="white">menu</v-icon>
       </v-btn>
@@ -120,32 +120,30 @@
     </v-content>
     <v-footer color="primary" class="bottom-bar" clipped-left app>
       <v-layout row wrap>
-        <!-- <v-flex xs12 md4> -->
-          <v-card class="bottom-card" xs12 sm6>
-            <v-card-title id="contact-title"><v-btn color="primary" dark href="/#/contact" class="full-width">Contact Five Star</v-btn></v-card-title>
+         <v-flex xs12 sm6 xl4> 
+          <v-card class="bottom-card">
+            <v-card-title class="contact-title"><v-btn color="primary" dark href="/#/contact" class="full-width">Contact Five Star</v-btn></v-card-title>
             <v-card-text>
               <v-btn raised color="white" class="full-width" href="tel:+1-208-270-0837">
                 <v-icon color="primary">phone</v-icon>
                 <span class="hidden-xs-only"> (208) 270-0837</span>
+                <span class="hidden-sm-and-up"> Call</span>
               </v-btn>
               <br>
               <v-btn raised color="white" class="full-width" href="mailto:service@fivestarservicepros.com">
                 <v-icon color="primary">email</v-icon>
                 <span class="hidden-xs-only"> service@fivestarservicepros.com</span>
+                <span class="hidden-sm-and-up"> Email</span>
               </v-btn>
             </v-card-text>
-            <!-- <v-card-media>
-              <v-icon light x-large>phone</v-icon>
-            </v-card-media> -->
-            <v-card-actions>
-              
-            </v-card-actions>
           </v-card>
-          <v-card class="bottom-card" xs12 md4>
+        </v-flex>
+        <v-flex xs12 sm6 xl4>
+          <v-card class="bottom-card">
             <!-- free quote contact link -->
             <v-btn color="primary" dark href="/#/appointments">Set Up Your Appointment</v-btn>
           </v-card>
-        <!-- </v-flex> -->
+        </v-flex>
       </v-layout>
       <!--<p class="full-width center">&copy; 2018, Five Star Service Pros</p>-->
     </v-footer>
@@ -153,13 +151,42 @@
 </template>
 
 <script>
-import Contact from './components/Contact.vue'
-
 export default {
   name: 'app',
   data: () => ({
     drawer: null,
-    services: [
+    areas: [
+      {
+        title: 'Boise',
+        neighborhoods: [
+          'Boise Bench',
+          'Boise Heights',
+          'Boise State University',
+          'Central Bench',
+          'Columbia Village',
+          'Depot Bench',
+          'Downtown Boise',
+          'East End',
+          'Garden City',
+          'Harris Ranch',
+          'Hidden Springs',
+          'Highlands',
+          'Hillcrest',
+          'North End',
+          'Northeast Boise',
+          'Northwest Boise',
+          'Quail Ridge',
+          'South Boise',
+          'South Boise Village',
+          'Southeast Boise',
+          'Sunset',
+          'Warm Springs',
+          'Warm Springs Mesa',
+          'West Boise',
+          'West End'
+        ]
+      }],
+      services: [
       {
         title: 'Drain Cleaning',
         route: '#/services/drain-cleaning'
@@ -176,114 +203,14 @@ export default {
       //   title: 'Mobile Home Plumbing',
       //   route: '#/services/mobile-home-plumbing'
       // }
-    ],
-    areas: [
-      {
-        title: 'Boise'
-      },
-      {
-        title: 'Garden City'
-      },
-      {
-        title: 'Caldwell'
-      },
-      {
-        title: 'Nampa'
-      }
     ]
-  }),
-  props: {
-      source: String
-  }
+  })
 }
+
+
 </script>
 
 <style>
 /* @import '../node_modules/vuetify/src/stylus/main.styl' */
-body {
-  margin: 0;
-}
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: lightgrey;
-  color: black;
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-}
-/* this height should match the logo png size */
-.top-bar {
-  /*height: 140px;*/
-}
-.nav-logo {
-  top: 140px;
-  float: left;
-}
-.logo {
-  text-align: center;
-  display: block;
-  max-width: 100%;
-}
-.nav-title {
-  font-family: 'Roboto','Futura',sans-serif;
-  font-size: 2em;
-  color: white;
-  font-variant: small-caps;
-  /* text-transform: uppercase; */
-  text-shadow: 1px 1px 5px red;
-  font-weight: bold;
-};
-/* footer */
-.bottom-bar {
-  color: white;
-  padding: 12px;
-}
-.bottom-card {
-  background-color: transparent;
-  color: white;
-  margin: 12px;
-  padding: 12px;
-}
-#contact-title {
-  font-weight: bold;
-  text-align: center;
-}
-/* generic classes */
-.component {
-  background-color: white;
-  padding: 12px;
-  box-shadow: 2px 2px 10px black;
-  max-width: 800px;
-  margin: 12px auto;
-}
-.component h1 {
-  text-align: center;
-  color: primary;
-  padding-bottom: 12px;
-}
-.full-width {
-  width: 100%;
-}
-.center {
-  text-align: center;
-}
-.float-left {
-  float: left;
-}
-.float-right {
-  float: right;
-}
-.no-bullet-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-.primary-card-title {
-  color: white;
-  font-weight: bold;
-  size: 2em;
-  margin: 2px auto;
-}
+@import './main.css'
 </style>
