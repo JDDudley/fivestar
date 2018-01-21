@@ -34,7 +34,7 @@
     data () {
       return {
         service: 'Residential Plumbing',
-        description: 'Five Star Service Pros offer affordable and professional service for a range of residential plumbing needs. Listed below are just a few of our specialties:',
+        description: 'Five Star Service Pros offer affordable and professional service for a range of residential plumbing needs. Kitchen sink clogged? Toilet stopped? Bath tub backed up? Let us help you with reliable and affordable service. Listed below are just a few of our specialties:',
         specificServices: [
           {
             title: 'Excavation',
@@ -56,6 +56,7 @@
               'Faucets, Fixtures and Pipe Repair',
               'Water Heater Install',
               'Water Heater Repair',
+              'Drain & Sewer Pipe Inspection',
               'Gas Piping',
               'Clear Drain Clog or Blockage',
               'Sump Pump or Foundation Drain Install',
@@ -64,7 +65,10 @@
               'Tankless Water Heater Repair',
               'Water Main Install or Repair',
               'Sewer Main Install or Replace',
-              'Drain Line Breakage Camera Locate'
+              'Drain Line Breakage Camera Locate',
+              'Hydrojetting',
+              'High Pressure Sewer Rehabilitation',
+              'Trenchless Pipe Replacement'
             ]
           },
           {

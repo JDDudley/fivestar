@@ -3,8 +3,8 @@
     <!--<h1>{{ msg }}</h1>-->
     <img src="../assets/logo_dk.png" class="logo hidden-xs-only" alt="Five Star Service Pros">
     <div>
-      <h1>Plumbing and Drain Cleaning Experts</h1>
-      <p>Welcome to Five Star Service Pros, the most reliable and affordable choice for your plumbing and drain cleaning needs in Boise and surrounding areas.</p>
+      <h1>Plumbing, Sewer and Drain Cleaning Experts</h1>
+      <p>Welcome to Five Star Service Pros, the most reliable and affordable choice for your plumbing, sewer, and drain cleaning needs in Boise and surrounding areas.</p>
     </div>
     <!-- Areas Served -->
     <div class="areas-served" v-for="area in areas" :key="area.title">
@@ -18,11 +18,13 @@
         </v-layout>
       </v-container>
     </div>
+    <!-- service truck image -->
+    <img src="../assets/service_truck.jpg" alt="Service Trucks Operating Throughout the Treasure Valley" class="logo">
   </div>
 </template>
 
 <script>
-  import store from '../store'
+// import store from '../store'
   
 export default {
   name: 'Home',

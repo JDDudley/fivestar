@@ -25,6 +25,29 @@
         </v-flex>
       </v-layout>
     </v-container>
+    <!-- areas -->
+    <v-container grid-list-md>
+      <v-layout row wrap>
+        <v-flex xs12>
+          <v-card color="primary">
+            <v-card-title>
+              <h2 class="primary-card-title">AREAS SERVED</h2>
+            </v-card-title>
+          </v-card>
+        </v-flex>
+        <div class="areas-served" v-for="area in areas" :key="area.title">
+          <h1>{{ area.title }}</h1>
+          <!-- grid -->
+          <v-container grid-list-md text-xs-center>
+            <v-layout row wrap>
+              <v-flex xs12 sm6 md3 xl2 v-for="neighborhood in area.neighborhoods" :key="neighborhood">
+                {{ neighborhood }}
+              </v-flex>
+            </v-layout>
+          </v-container>
+        </div>
+      </v-layout>
+    </v-container>
   </div>
 </template>
 
@@ -33,8 +56,8 @@
     name: 'Services',
     data () {
       return {
-        service: 'Plumbing & Drain Cleaning Services',
-        description: 'Five Star Service Pros offer affordable and professional service for a range of plumbing, heating, and air conditioning needs. Listed below are just a few of our specialties:',
+        service: 'Plumbing, Sewer & Drain Cleaning Services',
+        description: 'Five Star Service Pros offer affordable and professional service for a range of plumbing, sewer and drain cleaning needs. Listed below are just a few of our specialties:',
         specificServices: [
           {
             title: 'Excavation',
@@ -74,7 +97,38 @@
               'Water Treatment & Purification Repair'
             ]
           }
-        ]
+        ],
+        areas: [
+        {
+          title: 'Boise',
+          neighborhoods: [
+            'Boise Bench',
+            'Boise Heights',
+            'Boise State University',
+            'Central Bench',
+            'Columbia Village',
+            'Depot Bench',
+            'Downtown Boise',
+            'East End',
+            'Garden City',
+            'Harris Ranch',
+            'Hidden Springs',
+            'Highlands',
+            'Hillcrest',
+            'North End',
+            'Northeast Boise',
+            'Northwest Boise',
+            'Quail Ridge',
+            'South Boise',
+            'South Boise Village',
+            'Southeast Boise',
+            'Sunset',
+            'Warm Springs',
+            'Warm Springs Mesa',
+            'West Boise',
+            'West End'
+          ]
+        }]
       }
     }
   }

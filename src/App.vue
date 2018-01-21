@@ -9,7 +9,7 @@
       <v-spacer></v-spacer>
       <div class="hidden-md-and-down">
         <!-- Home button -->
-        <v-btn color="primary" dark href="/#/home">Home</v-btn>
+        <v-btn color="primary" dark href="/home">Home</v-btn>
         <!-- services dropdown -->
         <v-menu offset-y>
           <v-btn color="primary" dark slot="activator">Services</v-btn>
@@ -20,18 +20,18 @@
           </v-list>
         </v-menu>
         <!-- contact link -->
-        <v-btn color="primary" dark href="/#/contact">Contact</v-btn>
+        <v-btn color="primary" dark href="/contact">Contact</v-btn>
       </div>
-      <v-btn color="primary" href="tel:+1-208-270-0837">
+      <v-btn color="primary" href="tel:+1-208-260-1765">
         <v-icon color="white">phone</v-icon>
-        <span class="hidden-xs-only"> (208) 270-0837</span>
+        <span class="hidden-xs-only"> (208) 260-1765</span>
       </v-btn>
     </v-toolbar>
     <v-content>
       <!-- drawer -->
       <v-navigation-drawer dark clipped disable-route-watcher fixed v-model="drawer" app>
         <v-list>
-          <v-list-tile href="/#/home" @click.stop="drawer = !drawer">
+          <v-list-tile href="/home">
             <v-list-tile-action>
               <v-icon>home</v-icon>
             </v-list-tile-action>
@@ -41,7 +41,7 @@
           </v-list-tile>
           <!-- services -->
           <v-divider></v-divider>
-          <v-list-tile href="/#/services" @click.stop="drawer = !drawer">
+          <v-list-tile href="/services">
             <v-list-tile-action>
               <v-icon>build</v-icon>
             </v-list-tile-action>
@@ -51,8 +51,7 @@
           </v-list-tile>
           <v-list-tile v-for="service in services"
            :key="service.title"
-           :href="service.route"  
-           @click.stop="drawer = !drawer">
+           :href="service.route">
             <v-list-tile-action>
               <v-icon>keyboard_arrow_right</v-icon>
             </v-list-tile-action>
@@ -60,7 +59,7 @@
               {{ service.title }}
             </v-list-tile-title>
           </v-list-tile>
-          <!--<v-list-tile href="/#/services/residential-plumbing">
+          <!--<v-list-tile href="/services/residential-plumbing">
             <v-list-tile-action>
               <v-icon>home</v-icon>
             </v-list-tile-action>
@@ -68,7 +67,7 @@
               Residential Plumbing
             </v-list-tile-title>
           </v-list-tile>
-          <v-list-tile href="/#/services/drain-cleaning">
+          <v-list-tile href="/services/drain-cleaning">
             <v-list-tile-action>
               <v-icon>home</v-icon>
             </v-list-tile-action>
@@ -76,7 +75,7 @@
               Drain Cleaning
             </v-list-tile-title>
           </v-list-tile>
-          <v-list-tile href="/#/services/commercial-plumbing">
+          <v-list-tile href="/services/commercial-plumbing">
             <v-list-tile-action>
               <v-icon>fa-building</v-icon>
             </v-list-tile-action>
@@ -84,7 +83,7 @@
               Commercial Plumbing
             </v-list-tile-title>
           </v-list-tile>
-          <v-list-tile href="/#/services/mobile-home-plumbing">
+          <v-list-tile href="/services/mobile-home-plumbing">
             <v-list-tile-action>
               <v-icon>home</v-icon>
             </v-list-tile-action>
@@ -93,7 +92,7 @@
             </v-list-tile-title>
           </v-list-tile>-->
           <v-divider></v-divider>
-          <v-list-tile href="/#/contact" @click.stop="drawer = !drawer">
+          <v-list-tile href="/contact">
             <v-list-tile-action>
               <v-icon>mail</v-icon>
             </v-list-tile-action>
@@ -101,7 +100,7 @@
               Contact Five Star
             </v-list-tile-title>
           </v-list-tile>
-          <v-list-tile href="/#/appointments" @click.stop="drawer = !drawer">
+          <v-list-tile href="/appointments">
             <v-list-tile-action>
               <v-icon>schedule</v-icon>
             </v-list-tile-action>
@@ -120,13 +119,13 @@
     </v-content>
     <v-footer color="primary" class="bottom-bar" clipped-left app>
       <v-layout row wrap>
-         <v-flex xs12 sm6 xl4> 
+         <v-flex xs12 sm6> 
           <v-card class="bottom-card">
-            <v-card-title class="contact-title"><v-btn color="primary" dark href="/#/contact" class="full-width">Contact Five Star</v-btn></v-card-title>
+            <v-card-title class="contact-title"><v-btn color="primary" dark href="/contact" class="full-width">Contact Five Star</v-btn></v-card-title>
             <v-card-text>
-              <v-btn raised color="white" class="full-width" href="tel:+1-208-270-0837">
+              <v-btn raised color="white" class="full-width" href="tel:+1-208-260-1765">
                 <v-icon color="primary">phone</v-icon>
-                <span class="hidden-xs-only"> (208) 270-0837</span>
+                <span class="hidden-xs-only"> (208) 260-1765</span>
                 <span class="hidden-sm-and-up"> Call</span>
               </v-btn>
               <br>
@@ -138,10 +137,26 @@
             </v-card-text>
           </v-card>
         </v-flex>
-        <v-flex xs12 sm6 xl4>
+        <v-flex xs12 sm6>
           <v-card class="bottom-card">
             <!-- free quote contact link -->
-            <v-btn color="primary" dark href="/#/appointments">Set Up Your Appointment</v-btn>
+            <v-card-title class="contact-title">
+              <v-form v-model="valid" class="full-width" ref="appointmentForm">
+                <v-text-field
+                  label="Name"
+                  class="full-width"
+                  v-model="name"
+                  :rules="nameRules"
+                ></v-text-field>
+                <v-text-field
+                  label="Phone Number"
+                  v-model="phone"
+                  class="full-width"
+                  :rules="phoneRules"
+                ></v-text-field>
+                <v-btn color="primary" class="full-width" @click="appointmentSubmit" dark href="/appointments">Set Up Appointment</v-btn>
+              </v-form>
+            </v-card-title>
           </v-card>
         </v-flex>
       </v-layout>
@@ -204,7 +219,20 @@ export default {
       //   route: '#/services/mobile-home-plumbing'
       // }
     ]
-  })
+  }),
+  methods: {
+    appointmentSubmit () {
+      if (this.$refs.appointmentForm.validate()) {
+        // Native form submission is not yet supported
+        axios.post('/api/submit', {
+          name: this.name,
+          email: this.email,
+          select: this.select,
+          checkbox: this.checkbox
+        })
+      }
+    }
+  }
 }
 
 

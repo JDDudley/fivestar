@@ -1,8 +1,8 @@
 <template>
   <div class="component center">
     <h1>Contact Five Star Service Pros</h1>
-    <v-btn raised large color="primary" class="center" href="tel:+1-208-270-0837">
-      <v-icon color="white">phone</v-icon> (208) 270-0837
+    <v-btn raised large color="primary" class="center" href="tel:+1-208-260-1765">
+      <v-icon color="white">phone</v-icon> (208) 260-1765
     </v-btn>
     <br><br>
     <p>Five Star Service Pros is committed to servicing your plumbing and drain cleaning needs in a timely and cost-efficient manner. Contact us today to set up your free quote!</p>

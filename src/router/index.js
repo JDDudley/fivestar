@@ -14,17 +14,18 @@ Vue.use(Router)
 let titleStart = 'Five Star Service Pros'
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
       name: 'Home',
       component: Home,
-      meta: {title: titleStart + ' - Boise\'s Most Reliable & Affordable Plumbing, Heating & Air'}
+      meta: {title: titleStart + ' - Boise\'s Most Reliable Plumbing, Sewer, and Drain Cleaning Experts'}
     },
     {
       path: '/home',
       component: Home,
-      meta: {title: titleStart + ' - Boise\'s Most Reliable & Affordable Plumbing, Heating & Air'}
+      meta: {title: titleStart + ' - Boise\'s Most Reliable Plumbing, Sewer, and Drain Cleaning Experts'}
     },
     {
       path: '/contact',

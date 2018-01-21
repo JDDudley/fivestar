@@ -35,8 +35,13 @@
               'Clear Sewer Main',
               'Faucets, Fixtures and Pipe Repair',
               'Clear Drain Clog or Blockage',
+              'Sewer Pipe Inspection',
+              'Drain Pipe Inspection',
+              'Hydrojetting',
+              'High Pressure Sewer Rehabilitation',
               'Sump Pump or Foundation Drain Install',
               'Sump Pump Repair',
+              'Trenchless Pipe Replacement',
               'Water Main Install or Repair',
               'Sewer Main Install or Replace',
               'Drain Line Breakage Camera Locate'
