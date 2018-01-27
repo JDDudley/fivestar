@@ -6,6 +6,15 @@
       <h1>Plumbing, Sewer and Drain Cleaning Experts</h1>
       <p>Welcome to Five Star Service Pros, the most reliable and affordable choice for your plumbing, sewer, and drain cleaning needs in Boise and surrounding areas. With service available 24 hours a day, you know you can count on emergency services from a locally owned company.</p>
     </div>
+    <!-- Main Services -->
+    <h1>Services Include</h1
+    <v-container grid-list-md text-xs-center>
+      <v-layout row wrap>
+        <v-flex xs12 md6 v-for="service in services" :key="service" class="center">
+          {{ service }}
+        </v-flex>
+      </v-layout>
+    </V-container>
     <!-- Areas Served -->
     <div class="areas-served" v-for="area in areas" :key="area.title">
       <h1>Areas Served in {{ area.title }}</h1>
@@ -61,7 +70,23 @@ export default {
             'West Boise',
             'West End'
           ]
-        }]
+        }],
+      services: [
+        'Residential Plumbing',
+        'Toilets, Sinks, Garbage Disposals, & Drains',
+        'Washers & Dryers',                
+        'Water Tanks',
+        'Fuel Tanks',
+        'Hot Water Heaters',
+        'Basement Drainage',
+        'Sewer Cleaning & Repair',
+        'Installations',
+        'Gas Piping',
+        'Drain Clogs',
+        'Sump Pumps',
+        'Tankless Water Heaters',
+        'Water Treatment & Purification'
+      ]
     }
   }
 }
