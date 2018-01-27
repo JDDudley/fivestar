@@ -239,12 +239,12 @@ export default {
   methods: {
     appointmentSubmit () {
       if (this.$refs.appointmentForm.validate()) {
-        // Native form submission is not yet supported
         axios.post('//formspree.io/service@fivestarboise.com', {
           name: this.name,
           phone: this.phone
         })
         this.successAppSnack = true
+        this.$router.push('/thank-you')
       }
     }
   }

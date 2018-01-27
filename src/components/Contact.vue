@@ -82,6 +82,7 @@
             service: this.service
           })
           this.successSnack = true
+          this.$router.push('/thank-you')
         }
       },
       clear () {

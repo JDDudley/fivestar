@@ -8,6 +8,7 @@ import DrainCleaning from '@/components/Services/DrainCleaning'
 import ResidentialPlumbing from '@/components/Services/ResidentialPlumbing'
 import CommercialPlumbing from '@/components/Services/CommercialPlumbing'
 import MobileHomePlumbing from '@/components/Services/MobileHomePlumbing'
+import Thanks from '@/components/Thanks'
 
 Vue.use(Router)
 
@@ -38,6 +39,12 @@ export default new Router({
       name: 'Appointments',
       component: Appointments,
       meta: {title: titleStart + ' - Schedule an Appointment'}
+    },
+    {
+      path: '/thank-you',
+      name: 'Thank You',
+      component: Thanks,
+      meta: {title: titleStart + ' - Thank You!'}
     },
     {
       path: '/services',
