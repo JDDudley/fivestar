@@ -47,7 +47,16 @@ const webpackConfig = merge(baseWebpackConfig, {
       // Path to compiled app
       path.join(__dirname, '../dist'),
       // List of endpoints you wish to prerender
-      [ '/', '/home', '/services', '/contact', '/services/drain-cleaning', '/services/residential-plumbing', '/services/commercial-plumbing', '/appointments' ]
+      [ '/',
+        '/home',
+        '/services',
+        '/contact',
+        '/appointments',
+        '/thank-you',
+        '/services/drain-cleaning',
+        '/services/residential-plumbing',
+        '/services/commercial-plumbing'
+      ]
     ),
     // extract css into its own file
     new ExtractTextPlugin({
