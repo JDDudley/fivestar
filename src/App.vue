@@ -129,9 +129,9 @@
                 <span class="hidden-sm-and-up"> Call</span>
               </v-btn>
               <br>
-              <v-btn raised color="white" class="full-width" href="mailto:service@fivestarboise.com">
+              <v-btn raised color="white" class="full-width" href="mailto:holly@fivestarservicepros.com">
                 <v-icon color="primary">email</v-icon>
-                <span class="hidden-xs-only"> service@fivestarboise.com</span>
+                <span class="hidden-xs-only"> holly@fivestarservicepros.com</span>
                 <span class="hidden-sm-and-up"> Email</span>
               </v-btn>
             </v-card-text>
