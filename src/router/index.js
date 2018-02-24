@@ -21,12 +21,12 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: Home,
-      meta: {title: titleStart + ' - Boise\'s Most Reliable Plumbing, Sewer, and Drain Cleaning Experts'}
+      meta: {title: titleStart + ' - Boise Plumbing, Sewer, and Drain'}
     },
     {
       path: '/home',
       component: Home,
-      meta: {title: titleStart + ' - Boise\'s Most Reliable Plumbing, Sewer, and Drain Cleaning Experts'}
+      meta: {title: titleStart + ' - Boise\'s Plumbing, Sewer, and Drain'}
     },
     {
       path: '/contact',

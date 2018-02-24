@@ -31,7 +31,7 @@
       <!-- drawer -->
       <v-navigation-drawer dark clipped disable-route-watcher fixed v-model="drawer" app>
         <v-list>
-          <v-list-tile href="/home">
+          <v-list-tile href="/">
             <v-list-tile-action>
               <v-icon>home</v-icon>
             </v-list-tile-action>
