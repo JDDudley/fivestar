@@ -14,13 +14,13 @@
         <v-menu offset-y>
           <v-btn color="primary" dark slot="activator">Services</v-btn>
           <v-list>
-            <v-list-tile v-for="service in services" :key="service.title" :href="service.route" @click="">
+            <v-list-tile v-for="service in services" :key="service.title" :href="service.route">
               <v-list-tile-title>{{ service.title }}</v-list-tile-title>
             </v-list-tile>
           </v-list>
         </v-menu>
         <!-- contact link -->
-        <v-btn color="primary" dark href="/contact">Contact</v-btn>
+        <v-btn color="primary" dark href="/contact/">Contact</v-btn>
       </div>
       <v-btn color="primary" href="tel:+1-208-260-1765">
         <v-icon color="white">phone</v-icon>
@@ -41,7 +41,7 @@
           </v-list-tile>
           <!-- services -->
           <v-divider></v-divider>
-          <v-list-tile href="/services">
+          <v-list-tile href="/services/">
             <v-list-tile-action>
               <v-icon>build</v-icon>
             </v-list-tile-action>
@@ -92,7 +92,7 @@
             </v-list-tile-title>
           </v-list-tile>-->
           <v-divider></v-divider>
-          <v-list-tile href="/contact">
+          <v-list-tile href="/contact/">
             <v-list-tile-action>
               <v-icon>mail</v-icon>
             </v-list-tile-action>
@@ -100,7 +100,7 @@
               Contact Five Star
             </v-list-tile-title>
           </v-list-tile>
-          <v-list-tile href="/appointments">
+          <v-list-tile href="/appointments/">
             <v-list-tile-action>
               <v-icon>schedule</v-icon>
             </v-list-tile-action>
@@ -121,7 +121,7 @@
       <v-layout row wrap>
          <v-flex xs12 sm6> 
           <v-card class="bottom-card">
-            <v-card-title class="contact-title"><v-btn color="primary" dark href="/contact" class="full-width">Contact Five Star</v-btn></v-card-title>
+            <v-card-title class="contact-title"><v-btn color="primary" dark href="/contact/" class="full-width">Contact Five Star</v-btn></v-card-title>
             <v-card-text>
               <v-btn raised color="white" class="full-width" href="tel:+1-208-260-1765">
                 <v-icon color="primary">phone</v-icon>
@@ -218,19 +218,19 @@ export default {
       services: [
       {
         title: 'Drain Cleaning',
-        route: '/services/drain-cleaning'
+        route: '/services/drain-cleaning/'
       },
       {
         title: 'Residential Plumbing',
-        route: '/services/residential-plumbing'
+        route: '/services/residential-plumbing/'
       },
       {
         title: 'Commercial Plumbing',
-        route: '/services/commercial-plumbing'
+        route: '/services/commercial-plumbing/'
       }
       // {
       //   title: 'Mobile Home Plumbing',
-      //   route: '/services/mobile-home-plumbing'
+      //   route: '/services/mobile-home-plumbing/'
       // }
     ],
     successAppSnack: false,
