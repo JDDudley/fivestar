@@ -39,58 +39,63 @@
 </template>
 
 <script>
-  export default {
-    name: 'contact',
-    data: () => ({
-      valid: true,
-      name: '',
-      nameRules: [
-        (v) => !!v || 'Name is required'
-      ],
-      email: '',
-      emailRules: [
-        (v) => !!v || 'E-mail is required',
-        (v) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'E-mail must be valid.'
-      ],
-      phone: '',
-      phoneRules: [
-        (v) => !!v || 'Phone number is required so Five Star can contact you in a timely manner.'
-      ],
-      service: null,
-      services: [
-        'Drain Cleaning',
-        'Residential Plumbing',
-        'Commercial Plumbing',
-        // 'Mobile Home Plumbing',
-        'Other'
-      ],
-      successSnack: false,
-      successTimeout: 5000
-    }),
-    methods: {
-      submit () {
-        if (this.$refs.form.validate()) {
-          axios.post('//formspree.io/service@fivestarboise.com', {
-            name: this.name,
-            email: this.email,
-            phone: this.phone,
-            service: this.service
-          })
-          this.successSnack = true
-          this.$router.push('/thank-you')
-        }
-      },
-      clear () {
-        this.$refs.form.reset()
+export default {
+  name: "contact",
+  data: () => ({
+    valid: true,
+    name: "",
+    nameRules: [v => !!v || "Name is required"],
+    email: "",
+    emailRules: [
+      v => !!v || "E-mail is required",
+      v =>
+        /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v) ||
+        "E-mail must be valid."
+    ],
+    phone: "",
+    phoneRules: [
+      v =>
+        !!v ||
+        "Phone number is required so Five Star can contact you in a timely manner."
+    ],
+    service: null,
+    services: [
+      "Drain Cleaning",
+      "Residential Plumbing",
+      "Commercial Plumbing",
+      // 'Mobile Home Plumbing',
+      "Other"
+    ],
+    successSnack: false,
+    successTimeout: 5000
+  }),
+  methods: {
+    submit() {
+      if (this.$refs.form.validate()) {
+        axios.post("//formspree.io/service@fivestarboise.com", {
+          name: this.name,
+          email: this.email,
+          phone: this.phone,
+          service: this.service
+        });
+        this.successSnack = true;
+        this.$router.push("/thank-you");
       }
+    },
+    clear() {
+      this.$refs.form.reset();
     }
+  },
+  created: function () {
+      fbq('track', 'Lead');
   }
+};
 </script>
 
 <style scoped>
-  .form-div {
-    max-width: 600px;
-    text-align: center;
-    margin: 0 auto;
-  }
+.form-div {
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+}
 </style>

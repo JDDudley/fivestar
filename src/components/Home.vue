@@ -4,10 +4,13 @@
     <img src="../assets/logo_dk.png" class="logo hidden-xs-only" alt="Five Star Service Pros">
     <div>
       <h1>Plumbing, Sewer and Drain Cleaning Experts</h1>
-      <p>Welcome to Five Star Service Pros, the most reliable and affordable choice for your plumbing, sewer, and drain cleaning needs in Boise and surrounding areas. With service available 24 hours a day, you know you can count on emergency services from a locally owned company.</p>
+      <p>Welcome to Five Star Service Pros, the most reliable and affordable choice for your plumbing, sewer, septic, and drain cleaning needs in Boise and surrounding areas. With service available 24 hours a day, you know you can count on emergency services from a locally owned company.</p>
+      <p>All services are performed by experienced plumbers with years of experience in every area of the plumbing and pipe service trade. Whether it's a kitchen sink replacement or a complete drain cleaning service, you can feel confident that our plumbing services are performed in the quickest, safest, and most effective manner.</p>
+      <h2>Who is Five Star Service Pros?</h2>
+      <p>Five Star Service Pros is a local female-owned company with extensive experience in all areas of residential and commercial plumbing.</p>
     </div>
     <!-- Main Services -->
-    <h1>Services Include</h1
+    <h1>Services Include</h1>
     <v-container grid-list-md text-xs-center>
       <v-layout row wrap>
         <v-flex xs12 md6 v-for="service in services" :key="service" class="center">
@@ -74,7 +77,8 @@ export default {
       services: [
         'Residential Plumbing',
         'Toilets, Sinks, Garbage Disposals, & Drains',
-        'Washers & Dryers',                
+        'Washers & Dryers',
+        'Septic Tanks & Systems',             
         'Water Tanks',
         'Fuel Tanks',
         'Hot Water Heaters',
