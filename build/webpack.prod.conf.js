@@ -55,7 +55,9 @@ const webpackConfig = merge(baseWebpackConfig, {
         '/thank-you',
         '/services/drain-cleaning',
         '/services/residential-plumbing',
-        '/services/commercial-plumbing'
+        '/services/commercial-plumbing',
+        // '/services/flood-repair',
+        '/page-not-found'
       ]
     ),
     // extract css into its own file

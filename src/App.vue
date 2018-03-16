@@ -59,38 +59,6 @@
               {{ service.title }}
             </v-list-tile-title>
           </v-list-tile>
-          <!--<v-list-tile href="/services/residential-plumbing">
-            <v-list-tile-action>
-              <v-icon>home</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-title>
-              Residential Plumbing
-            </v-list-tile-title>
-          </v-list-tile>
-          <v-list-tile href="/services/drain-cleaning">
-            <v-list-tile-action>
-              <v-icon>home</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-title>
-              Drain Cleaning
-            </v-list-tile-title>
-          </v-list-tile>
-          <v-list-tile href="/services/commercial-plumbing">
-            <v-list-tile-action>
-              <v-icon>fa-building</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-title>
-              Commercial Plumbing
-            </v-list-tile-title>
-          </v-list-tile>
-          <v-list-tile href="/services/mobile-home-plumbing">
-            <v-list-tile-action>
-              <v-icon>home</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-title>
-              Mobile Home Plumbing
-            </v-list-tile-title>
-          </v-list-tile>-->
           <v-divider></v-divider>
           <v-list-tile href="/contact/">
             <v-list-tile-action>
@@ -227,6 +195,10 @@ export default {
       {
         title: 'Commercial Plumbing',
         route: '/services/commercial-plumbing/'
+      },
+      {
+        title: 'Flood Repair',
+        route: '/services/flood-repair'
       }
       // {
       //   title: 'Mobile Home Plumbing',

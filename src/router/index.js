@@ -8,7 +8,9 @@ import DrainCleaning from '@/components/Services/DrainCleaning'
 import ResidentialPlumbing from '@/components/Services/ResidentialPlumbing'
 import CommercialPlumbing from '@/components/Services/CommercialPlumbing'
 import MobileHomePlumbing from '@/components/Services/MobileHomePlumbing'
+import FloodRepair from '@/components/Services/FloodRepair'
 import Thanks from '@/components/Thanks'
+import NotFound from '@/components/NotFound'
 
 Vue.use(Router)
 
@@ -75,6 +77,24 @@ export default new Router({
       name: 'MobileHomePlumbing',
       component: MobileHomePlumbing,
       meta: {title: titleStart + ' - Mobile Home Plumbing'}
+    },
+    {
+      path: '/services/flood-repair',
+      name: 'FloodRepair',
+      components: FloodRepair,
+      meta: {title: titleStart + ' - Flood Repair & Restoration'}
+    },
+    {
+      path: '/page-not-found',
+      name: 'NotFound',
+      components: NotFound,
+      meta: {title: titleStart + ' - Page Not Found'}
     }
+    // {
+    //   path: '*',
+    //   name: 'NotFound',
+    //   components: NotFound,
+    //   meta: {title: titleStart + ' - Page Not Found'}
+    // }
   ]
 })

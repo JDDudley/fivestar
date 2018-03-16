@@ -31,7 +31,7 @@
         <v-flex xs12>
           <v-card color="primary">
             <v-card-title>
-              <h2 class="primary-card-title">AREAS SERVED</h2>
+              <h2 class="primary-card-title">COMMON AREAS SERVED</h2>
             </v-card-title>
           </v-card>
         </v-flex>
@@ -95,6 +95,15 @@
             list: [
               'Water Treatment & Purification Install',
               'Water Treatment & Purification Repair'
+            ]
+          },
+          {
+            title: 'Floor Repair & Restoration',
+            list: [
+              'Emergency Flood Repair',
+              'Water Removal & Extraction',
+              'Mold Remediation',
+              'Damage Repair & Restoration'
             ]
           }
         ],
