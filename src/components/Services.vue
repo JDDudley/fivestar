@@ -57,7 +57,7 @@
     data () {
       return {
         service: 'Plumbing, Sewer & Drain Cleaning Services',
-        description: 'Five Star Service Pros offer affordable and professional service for a range of plumbing, sewer and drain cleaning needs. Listed below are just a few of our specialties:',
+        description: 'Five Star Service Pros has the experience and expertise to offer affordable, reliable, and professional service in all areas of plumbing, sewer, and drain cleaning services. Let us give you the best treatment in Boise. Listed below are just a few of our specialties:',
         specificServices: [
           {
             title: 'Excavation',

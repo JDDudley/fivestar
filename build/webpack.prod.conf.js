@@ -48,7 +48,6 @@ const webpackConfig = merge(baseWebpackConfig, {
       path.join(__dirname, '../dist'),
       // List of endpoints you wish to prerender
       [ '/',
-        '/home',
         '/services',
         '/contact',
         '/appointments',
@@ -56,8 +55,8 @@ const webpackConfig = merge(baseWebpackConfig, {
         '/services/drain-cleaning',
         '/services/residential-plumbing',
         '/services/commercial-plumbing',
-        // '/services/flood-repair',
-        '/page-not-found'
+        '/services/flood-repair',
+        '/404'
       ]
     ),
     // extract css into its own file

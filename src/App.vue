@@ -137,95 +137,86 @@
 </template>
 
 <script>
-const axios = require('axios')
+const axios = require("axios");
 
 export default {
-  name: 'app',
+  name: "app",
   data: () => ({
     drawer: null,
     valid: true,
-    name: '',
-    nameRules: [
-      (v) => !!v || 'Name is required'
-    ],
-    phone: '',
-    phoneRules: [
-      (v) => !!v || 'Phone number is required'
-    ],
+    name: "",
+    nameRules: [v => !!v || "Name is required"],
+    phone: "",
+    phoneRules: [v => !!v || "Phone number is required"],
     areas: [
       {
-        title: 'Boise',
+        title: "Boise",
         neighborhoods: [
-          'Boise Bench',
-          'Boise Heights',
-          'Boise State University',
-          'Central Bench',
-          'Columbia Village',
-          'Depot Bench',
-          'Downtown Boise',
-          'East End',
-          'Garden City',
-          'Harris Ranch',
-          'Hidden Springs',
-          'Highlands',
-          'Hillcrest',
-          'North End',
-          'Northeast Boise',
-          'Northwest Boise',
-          'Quail Ridge',
-          'South Boise',
-          'South Boise Village',
-          'Southeast Boise',
-          'Sunset',
-          'Warm Springs',
-          'Warm Springs Mesa',
-          'West Boise',
-          'West End'
+          "Boise Bench",
+          "Boise Heights",
+          "Boise State University",
+          "Central Bench",
+          "Columbia Village",
+          "Depot Bench",
+          "Downtown Boise",
+          "East End",
+          "Garden City",
+          "Harris Ranch",
+          "Hidden Springs",
+          "Highlands",
+          "Hillcrest",
+          "North End",
+          "Northeast Boise",
+          "Northwest Boise",
+          "Quail Ridge",
+          "South Boise",
+          "South Boise Village",
+          "Southeast Boise",
+          "Sunset",
+          "Warm Springs",
+          "Warm Springs Mesa",
+          "West Boise",
+          "West End"
         ]
-      }],
-      services: [
-      {
-        title: 'Drain Cleaning',
-        route: '/services/drain-cleaning/'
-      },
-      {
-        title: 'Residential Plumbing',
-        route: '/services/residential-plumbing/'
-      },
-      {
-        title: 'Commercial Plumbing',
-        route: '/services/commercial-plumbing/'
-      },
-      {
-        title: 'Flood Repair',
-        route: '/services/flood-repair'
       }
-      // {
-      //   title: 'Mobile Home Plumbing',
-      //   route: '/services/mobile-home-plumbing/'
-      // }
+    ],
+    services: [
+      {
+        title: "Residential Plumbing",
+        route: "/services/residential-plumbing/"
+      },
+      {
+        title: "Commercial Plumbing",
+        route: "/services/commercial-plumbing/"
+      },
+      {
+        title: "Drain Cleaning",
+        route: "/services/drain-cleaning/"
+      },
+      {
+        title: "Flood Repair",
+        route: "/services/flood-repair"
+      }
     ],
     successAppSnack: false,
     successAppTimeout: 5000
   }),
   methods: {
-    appointmentSubmit () {
+    appointmentSubmit() {
       if (this.$refs.appointmentForm.validate()) {
-        axios.post('//formspree.io/service@fivestarboise.com', {
+        axios.post("//formspree.io/service@fivestarboise.com", {
           name: this.name,
           phone: this.phone
-        })
-        this.successAppSnack = true
-        this.$router.push('/thank-you')
+        });
+        this.successAppSnack = true;
+        this.$router.push("/thank-you");
       }
     }
   }
-}
-
-
+};
 </script>
 
 <style>
 /* @import '../node_modules/vuetify/src/stylus/main.styl' */
-@import './main.css'
+@import "./main.css";
 </style>

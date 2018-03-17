@@ -27,7 +27,7 @@
     data () {
       return {
         service: 'Drain Cleaning',
-        description: 'Experienced and affordable drain cleaning available 24/7 - that\'s the Five Star difference.',
+        description: 'Whether it\s a clogged sink or tub, or an entire drainage system backed up, Five Star Service Pros has the experience and equipment to repair any damage and get you back to normal.',
         specificServices: [
           {
             title: 'Drain Cleaning Services',

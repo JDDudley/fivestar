@@ -29,48 +29,52 @@
 </template>
 
 <script>
-  export default {
-    name: 'FloodRepair',
-    data () {
-      return {
-        service: 'Flood Repair & Restoration',
-        description: 'Five Star Service Pros has the experience and equipment to handle all aspects of every homeowner\'s worst nightmare - a broken pipe flooding and damaging your home and belongings. 24 hours a day, 7 days a week, we\'re on call to stop the leak, repair the damaged line, and restore your home in a timely manner. No matter how big or small, unexpected flooding robs you of your security and comfort and we\'ll be by your side to get things back to normal as quickly as possible.',
-        specificServices: [
-          {
-            title: 'Water Damage Restoration',
-            list: [
-              'Inspection & Damage Assessment',
-              'Water Removal/Water Extraction',
-              'Drying and Dehumidification',
-              'Cleaning and Repair',
-              'Restoration'
-            ]
-          },
-          {
-            title: 'Mold Remediation',
-            list: [
-              'Inspection & Damage Assessment',
-              'Mold Containment',
-              'Air Filtration',
-              'Mold Removal',
-              'Mold-Infested Material Removal',
-              'Cleaning of Damaged Property',
-              'Restoration'
-            ]
-          },
-          {
-            title: 'Storm Damage Restoration',
-            list: [
-              'Inspection & Damage Assessment',
-              'Water Removal',
-              'Drying and Dehumidification',
-              'Cleaning and Repair',
-              'Restoration'
-            ]
-          }
-        ]
-      }
-    }
+export default {
+  name: "FloodRepair",
+  data() {
+    return {
+      service: "Flood Repair & Restoration",
+      description:
+        "Five Star Service Pros has the experience and equipment to handle all aspects of every homeowner's worst nightmare - a broken pipe flooding and damaging your home and belongings. 24 hours a day, 7 days a week, we're on call to stop the leak, repair the damaged line, and restore your home in a timely manner. No matter how big or small, unexpected flooding robs you of your security and comfort and we'll be by your side to get things back to normal as quickly as possible.",
+      specificServices: [
+        {
+          title: "Water Damage Restoration",
+          list: [
+            "Inspection & Damage Assessment",
+            "Water Removal/Water Extraction",
+            "Drying and Dehumidification",
+            "Cleaning and Repair",
+            "Restoration"
+          ]
+        },
+        {
+          title: "Mold Remediation",
+          list: [
+            "Inspection & Damage Assessment",
+            "Mold Containment",
+            "Air Filtration",
+            "Mold Removal",
+            "Mold-Infested Material Removal",
+            "Cleaning of Damaged Property",
+            "Restoration"
+          ]
+        },
+        {
+          title: "Storm Damage Restoration",
+          list: [
+            "Inspection & Damage Assessment",
+            "Water Removal",
+            "Drying and Dehumidification",
+            "Cleaning and Repair",
+            "Restoration"
+          ]
+        }
+      ]
+    };
   }
+};
 </script>
 
+<style>
+
+</style>
