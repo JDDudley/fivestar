@@ -2,7 +2,7 @@
   <div class='component center'>
     <h1>Schedule Your Appointment Today</h1>
     <br><br>
-    <p>Five Star Service Pros is committed to servicing your plumbing and drain cleaning needs in a timely and cost-efficient manner. Book an appointment to get Boise\'s best plumbing experts at your door to solve any pluming, sewer, or drain troubles you're having.</p>
+    <p>Five Star Service Pros is committed to servicing your plumbing and drain cleaning needs in a timely and cost-efficient manner. Book an appointment to get Boise\'s best plumbing experts at your door to solve any plumbing, sewer, or drain troubles you're having.</p>
     <div class='form-div'>
       <v-form v-model='valid' ref='form' lazy-validation>
         <v-text-field
