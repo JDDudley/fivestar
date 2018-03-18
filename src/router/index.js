@@ -15,6 +15,7 @@ import NotFound from '@/components/NotFound'
 Vue.use(Router)
 
 let titleStart = 'Five Star Service Pros'
+let keywords = 'plumbing,drain cleaning,sewer,pipe,drain,sink,tub,toilet,septic,flood'
 
 export default new Router({
   mode: 'history',
@@ -25,6 +26,7 @@ export default new Router({
       component: Home,
       meta: {
         title: titleStart + ' - Boise Plumbing, Sewer, and Drain',
+        description: 'Hi!',
         metaTags: [
           {
             name: 'description',
@@ -57,7 +59,7 @@ export default new Router({
       metaTags: [
         {
           name: 'description',
-          content: 'Book an appointment to get Boise\'s best plumbing experts at your door to solve any pluming, sewer, or drain troubles you\'re having.'
+          content: 'Book an appointment to get Boise\'s best plumbing experts at your door to solve any plumbing, sewer, or drain troubles you\'re having.'
         }
       ]
     },
