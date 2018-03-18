@@ -81,6 +81,11 @@ export default {
     successSnack: false,
     successTimeout: 5000
   }),
+  metaInfo: {
+    meta: [
+      {name: 'description', content: 'Book an appointment to get Boise\'s best plumbing experts at your door to solve any plumbing, sewer, or drain troubles you\'re having.'}
+    ]
+  },
   methods: {
     submit() {
       if (this.$refs.form.validate()) {

@@ -14,7 +14,12 @@
     name: 'thanks',
     data: () => ({
       title: 'Thank You!'
-    })
+    }),
+    metaInfo: {
+      meta: [
+        {name: 'description', content: 'Thanks for contacting Five Star Service Pros! You\'re about to hear back from the most reliable plumbers in Boise.'}
+      ]
+    }
   }
 </script>
 

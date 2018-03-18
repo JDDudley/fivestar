@@ -71,6 +71,11 @@ export default {
         }
       ]
     };
+  },
+  metaInfo: {
+    meta: [
+      {name: 'description', content: '24/7 Emergency flood repair and restoration. Five Star Service Pros is always here to help minimize damage and ensure you get back to normal as quickly as possible.'}
+    ]
   }
 };
 </script>

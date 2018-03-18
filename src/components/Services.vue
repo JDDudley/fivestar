@@ -139,6 +139,11 @@
           ]
         }]
       }
+    },
+    metaInfo: {
+      meta: [
+        {name: 'description', content: 'Five Star Service Pros has experience and expertise in all areas of plumbing, sewer, and drain cleaning services. Let us give you the best treatment in Boise.'}
+      ]
     }
   }
 </script>
