@@ -14,7 +14,7 @@
         <v-menu offset-y>
           <v-btn color="primary" dark slot="activator">Services</v-btn>
           <v-list>
-            <v-list-tile v-for="service in services" :key="service.title" :href="service.route">
+            <v-list-tile :v-for="service in services" :key="service.title" :href="service.route">
               <v-list-tile-title>{{ service.title }}</v-list-tile-title>
             </v-list-tile>
           </v-list>
@@ -49,7 +49,7 @@
               Services
             </v-list-tile-title>
           </v-list-tile>
-          <v-list-tile v-for="service in services"
+          <v-list-tile :v-for="service in services"
            :key="service.title"
            :href="service.route">
             <v-list-tile-action>

@@ -1,7 +1,7 @@
 <template>
   <div class="component">
     <h1>{{ service }}</h1>
-    <p v-for="p in description">{{ p }}</p>
+    <p :v-for="p in description">{{ p }}</p>
     <v-container grid-list-md>
       <v-layout row wrap>
         <v-flex xs12>
@@ -11,14 +11,14 @@
             </v-card-title>
           </v-card>
         </v-flex>
-        <v-flex xs12 sm6 v-for="specificService in specificServices" :key="specificService.title">
+        <v-flex xs12 sm6 :v-for="specificService in specificServices" :key="specificService.title">
           <v-card>
             <v-card-title primary-title>
               <h3 class="headline">{{ specificService.title }}</h3>
             </v-card-title>
             <v-card-text>
               <ul class="no-bullet-list">
-                <li v-for="item in specificService.list"><v-divider></v-divider>{{ item }}</li>
+                <li :v-for="item in specificService.list"><v-divider></v-divider>{{ item }}</li>
               </ul>
             </v-card-text>
           </v-card>
@@ -35,12 +35,12 @@
             </v-card-title>
           </v-card>
         </v-flex>
-        <div class="areas-served" v-for="area in areas" :key="area.title">
+        <div class="areas-served" :v-for="area in areas" :key="area.title">
           <h1>{{ area.title }}</h1>
           <!-- grid -->
           <v-container grid-list-md text-xs-center>
             <v-layout row wrap>
-              <v-flex xs12 sm6 md3 xl2 v-for="neighborhood in area.neighborhoods" :key="neighborhood">
+              <v-flex xs12 sm6 md3 xl2 :v-for="neighborhood in area.neighborhoods" :key="neighborhood">
                 {{ neighborhood }}
               </v-flex>
             </v-layout>
@@ -141,14 +141,12 @@ export default {
     };
   },
   metaInfo: {
-    title: "Five Star Service Pros",
-    titleTemplate:
-      "%s - Services",
+    title: 'Five Star Service Pros - Services',
     meta: [
       {
-        name: "description",
+        name: 'description',
         content:
-          "Five Star Service Pros has experience and expertise in all areas of plumbing, sewer, and drain cleaning services. Let us give you the best treatment in Boise."
+          'Five Star Service Pros has experience and expertise in all areas of plumbing, sewer, and drain cleaning services. Let us give you the best treatment in Boise.'
       }
     ]
   }

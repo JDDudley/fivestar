@@ -75,8 +75,7 @@ export default {
     successTimeout: 5000
   }),
   metaInfo: {
-    title: "Five Star Service Pros",
-    titleTemplate: "%s - Contact Us For Boise's Best Service",
+    title: "Five Star Service Pros - Contact Us For Boise's Best Service",
     meta: [
       {
         name: "description",

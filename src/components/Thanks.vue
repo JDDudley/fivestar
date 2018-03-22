@@ -11,19 +11,17 @@
 
 <script>
 export default {
-  name: "thanks",
+  name: 'thanks',
   data: () => ({
-    title: "Thank You!"
+    title: 'Thank You!'
   }),
   metaInfo: {
-    title: "Five Star Service Pros",
-    titleTemplate:
-      "%s - You'll Hear Back Soon!",
+    title: 'Five Star Service Pros - You\'ll Hear Back Soon!',
     meta: [
       {
-        name: "description",
+        name: 'description',
         content:
-          "Thanks for contacting Five Star Service Pros! You're about to hear back from the most reliable plumbers in Boise."
+          'Thanks for contacting Five Star Service Pros! You\'re about to hear back from the most reliable plumbers in Boise.'
       }
     ]
   }

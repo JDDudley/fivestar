@@ -19,18 +19,18 @@
     <h1>Services Include</h1>
     <v-container grid-list-md text-xs-center>
       <v-layout row wrap>
-        <v-flex xs12 md6 v-for="service in services" :key="service" class="center">
+        <v-flex xs12 md6 :v-for="service in services" :key="service" class="center">
           {{ service }}
         </v-flex>
       </v-layout>
     </V-container>
     <!-- Areas Served -->
-    <div class="areas-served" v-for="area in areas" :key="area.title">
+    <div class="areas-served" :v-for="area in areas" :key="area.title">
       <h1>Areas Served in {{ area.title }}</h1>
       <!-- grid -->
       <v-container grid-list-md text-xs-center>
         <v-layout row wrap>
-          <v-flex xs12 sm6 md3 xl2 v-for="neighborhood in area.neighborhoods" :key="neighborhood">
+          <v-flex xs12 sm6 md3 xl2 :v-for="neighborhood in area.neighborhoods" :key="neighborhood">
             {{ neighborhood }}
           </v-flex>
         </v-layout>
@@ -117,8 +117,7 @@ export default {
     }
   },
   metaInfo: {
-    title: 'Five Star Service Pros',
-    titleTemplate: '%s - Boise\'s Plumbing, Sewer, & Drain',
+    title: 'Five Star Service Pros - Boise\'s Plumbing, Sewer, & Drain',
     meta: [
       {name: 'description', content: 'Five Star Service Pros is Boise\'s  most reliable and affordable choice for your plumbing, sewer, and drain cleaning needs. With service available 24 hours a day, you know you can count on emergency services from a locally owned company.'}
     ]

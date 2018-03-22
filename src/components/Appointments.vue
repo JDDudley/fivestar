@@ -77,8 +77,7 @@ export default {
     successTimeout: 5000
   }),
   metaInfo: {
-    title: "Five Star Service Pros",
-    titleTemplate: "%s - Book an Appointment",
+    title: "Five Star Service Pros - Book an Appointment",
     meta: [
       {
         name: "description",

@@ -30,13 +30,13 @@
 
 <script>
 export default {
-  name: "CommercialPlumbing",
+  name: 'CommercialPlumbing',
   data() {
     return {
-      service: "Commercial Plumbing",
+      service: 'Commercial Plumbing',
       description: [
-        "Five Star has the knowledge and experience to handle your commercial plumbing needs in a prompt and professional fashion.",
-        "With 24/7 availability and reliable, experienced technicians, you can rest assured you'll never have to worry about having a technician available to handle any commercial plumbing needs. From kicthen and bathroom problems to large-scale campus outages, know that Five Star Service Pros has experience in every area of commercial plumbing needs."
+        'Five Star has the knowledge and experience to handle your commercial plumbing needs in a prompt and professional fashion.',
+        'With 24/7 availability and reliable, experienced technicians, you can rest assured you\'ll never have to worry about having a technician available to handle any commercial plumbing needs. From kicthen and bathroom problems to large-scale campus outages, know that Five Star Service Pros has experience in every area of commercial plumbing needs.'
       ],
       specificServices: [
         {
@@ -76,8 +76,7 @@ export default {
     };
   },
   metaInfo: {
-    title: "Five Star Service Pros",
-    titleTemplate: "%s - Reliable, Local Commercial Plumbing",
+    title: 'Five Star Service Pros - Reliable, Local Commercial Plumbing',
     meta: [
       {
         name: "description",

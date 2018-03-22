@@ -1,17 +1,17 @@
 <template>
   <div class="component">
     <h1>{{ service }}</h1>
-    <p v-for="p in description">{{ p }}</p>
+    <p :v-for="p in description">{{ p }}</p>
     <v-container grid-list-md>
       <v-layout row wrap>
-        <v-flex xs12 v-for="specificService in specificServices" :key="specificService.title">
+        <v-flex xs12 :v-for="specificService in specificServices" :key="specificService.title">
           <v-card>
             <v-card-title primary-title>
               <h3 class="headline">{{ specificService.title }}</h3>
             </v-card-title>
             <v-card-text>
               <ul class="no-bullet-list">
-                <li v-for="item in specificService.list"><v-divider></v-divider>{{ item }}</li>
+                <li :v-for="item in specificService.list"><v-divider></v-divider>{{ item }}</li>
               </ul>
             </v-card-text>
           </v-card>
@@ -55,13 +55,12 @@ export default {
     };
   },
   metaInfo: {
-    title: "Five Star Service Pros",
-    titleTemplate: "%s - Drain Inspection & Cleaning",
+    title: 'Five Star Service Pros - Drain Inspection & Cleaning',
     meta: [
       {
-        name: "description",
+        name: 'description',
         content:
-          "Whether its a clogged sink or tub, or an entire drainage system backed up, Five Star Service Pros has the experience and equipment to repair any damage and get you back to normal."
+          'Whether its a clogged sink or tub, or an entire drainage system backed up, Five Star Service Pros has the experience and equipment to repair any damage and get you back to normal.'
       }
     ]
   }
