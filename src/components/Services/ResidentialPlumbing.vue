@@ -82,7 +82,7 @@ export default {
   },
   metaInfo: {
     title: "Five Star Service Pros",
-    titleTemplate: "%s - Residential Plumbing Services",
+    titleTemplate: "%s - Residential Plumbing",
     meta: [
       {
         name: "description",

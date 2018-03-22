@@ -56,7 +56,7 @@ export default {
   },
   metaInfo: {
     title: "Five Star Service Pros",
-    titleTemplate: "%s - Drain Inspection & Cleaning Services",
+    titleTemplate: "%s - Drain Inspection & Cleaning",
     meta: [
       {
         name: "description",
