@@ -117,6 +117,8 @@ export default {
     }
   },
   metaInfo: {
+    title: 'Five Star Service Pros',
+    titleTemplate: '%s - Boise\'s Most Reliable Plumbing, Sewer, & Drain Cleaning Specialists',
     meta: [
       {name: 'description', content: 'Five Star Service Pros is Boise\'s  most reliable and affordable choice for your plumbing, sewer, and drain cleaning needs. With service available 24 hours a day, you know you can count on emergency services from a locally owned company.'}
     ]

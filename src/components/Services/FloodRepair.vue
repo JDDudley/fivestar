@@ -1,7 +1,7 @@
 <template>
   <div class="component">
     <h1>{{ service }}</h1>
-    <p>{{ description }}</p>
+    <p v-for="p in description">{{ p }}</p>
     <v-container grid-list-md>
       <v-layout row wrap>
         <v-flex xs12>
@@ -34,8 +34,11 @@ export default {
   data() {
     return {
       service: "Flood Repair & Restoration",
-      description:
-        "Five Star Service Pros has the experience and equipment to handle all aspects of every homeowner's worst nightmare - a broken pipe flooding and damaging your home and belongings. 24 hours a day, 7 days a week, we're on call to stop the leak, repair the damaged line, and restore your home in a timely manner. No matter how big or small, unexpected flooding robs you of your security and comfort and we'll be by your side to get things back to normal as quickly as possible.",
+      description: [
+        'Five Star Service Pros has the experience and equipment to handle all aspects of every homeowner\'s worst nightmare - a broken pipe flooding and damaging your home and belongings. 24 hours a day, 7 days a week, we\'re on call to stop the leak, repair the damaged line, and restore your home in a timely manner.',
+        'When searching for help with a serious home flooding emergency, it\'s important to find a trustworthy local company that is available 24/7 and has reliable local plumbing, mold remediation, and restoration contractors ready to get to work.',
+        'No matter how big or small, unexpected flooding robs you of your security and comfort and we\'ll be by your side to get things back to normal as quickly as possible.'
+      ],
       specificServices: [
         {
           title: "Water Damage Restoration",
@@ -73,6 +76,9 @@ export default {
     };
   },
   metaInfo: {
+    title: "Five Star Service Pros",
+    titleTemplate:
+      "%s - Flood Repair, Mold Remediation, & Restoration Services",
     meta: [
       {name: 'description', content: '24/7 Emergency flood repair and restoration. Five Star Service Pros is always here to help minimize damage and ensure you get back to normal as quickly as possible.'}
     ]

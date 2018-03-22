@@ -45,51 +45,52 @@
 
 <script>
 export default {
-  name: 'contact',
+  name: "contact",
   data: () => ({
     valid: true,
-    name: '',
-    nameRules: [v => !!v || 'Name is required'],
-    email: '',
+    name: "",
+    nameRules: [v => !!v || "Name is required"],
+    email: "",
     emailRules: [
-      v => !!v || 'E-mail is required',
+      v => !!v || "E-mail is required",
       v =>
         /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v) ||
-        'E-mail must be valid.'
+        "E-mail must be valid."
     ],
-    phone: '',
+    phone: "",
     phoneRules: [
       v =>
         !!v ||
-        'Phone number is required so Five Star can contact you in a timely manner.'
+        "Phone number is required so Five Star can contact you in a timely manner."
     ],
     service: null,
     services: [
-      'Residential Plumbing',
-      'Commercial Plumbing',
-      'Drain Cleaning',
-      'Flood Repair',
-      'Other'
+      "Residential Plumbing",
+      "Commercial Plumbing",
+      "Drain Cleaning",
+      "Flood Repair",
+      "Other"
     ],
     bestTime: null,
-    bestTimes: [
-      'Morning',
-      'Mid-Day',
-      'Afternoon',
-      'Evening'
-    ],
+    bestTimes: ["Morning", "Mid-Day", "Afternoon", "Evening"],
     successSnack: false,
     successTimeout: 5000
   }),
   metaInfo: {
+    title: "Five Star Service Pros",
+    titleTemplate: "%s - Book an Appointment",
     meta: [
-      {name: 'description', content: 'Book an appointment to get Boise\'s best plumbing experts at your door to solve any plumbing, sewer, or drain troubles you\'re having.'}
+      {
+        name: "description",
+        content:
+          "Book an appointment to get Boise's best plumbing experts at your door to solve any plumbing, sewer, or drain troubles you're having."
+      }
     ]
   },
   methods: {
     submit() {
       if (this.$refs.form.validate()) {
-        axios.post('//formspree.io/service@fivestarboise.com', {
+        axios.post("//formspree.io/service@fivestarboise.com", {
           name: this.name,
           email: this.email,
           phone: this.phone,
@@ -97,15 +98,15 @@ export default {
           bestTime: this.bestTime
         });
         this.successSnack = true;
-        this.$router.push('/thank-you');
+        this.$router.push("/thank-you");
       }
     },
     clear() {
       this.$refs.form.reset();
     }
   },
-  created: function () {
-      fbq('track', 'Lead');
+  created: function() {
+    fbq("track", "Lead");
   }
 };
 </script>

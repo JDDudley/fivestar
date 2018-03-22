@@ -1,7 +1,7 @@
 <template>
   <div class="component">
     <h1>{{ service }}</h1>
-    <p>{{ description }}</p>
+    <p v-for="p in description">{{ p }}</p>
     <v-container grid-list-md>
       <v-layout row wrap>
         <v-flex xs12>
@@ -52,98 +52,105 @@
 </template>
 
 <script>
-  export default {
-    name: 'Services',
-    data () {
-      return {
-        service: 'Plumbing, Sewer & Drain Cleaning Services',
-        description: 'Five Star Service Pros has the experience and expertise to offer affordable, reliable, and professional service in all areas of plumbing, sewer, and drain cleaning services. Let us give you the best treatment in Boise. Listed below are just a few of our specialties:',
-        specificServices: [
-          {
-            title: 'Excavation',
-            list: [
-              'Water & Fuel Tank Installation',
-              'Water & Fuel Tank Removal'
-            ]
-          },
-          {
-            title: 'Foundations',
-            list: [
-              'Basement Drainage Channels Repair'
-            ]
-          },
-          {
-            title: 'Plumbing',
-            list: [
-              'Clear Sewer Main',
-              'Faucets, Fixtures and Pipe Repair',
-              'Water Heater Install',
-              'Water Heater Repair',
-              'Gas Piping',
-              'Clear Drain Clog or Blockage',
-              'Sump Pump or Foundation Drain Install',
-              'Sump Pump Repair',
-              'Tankless Water Heater Install',
-              'Tankless Water Heater Repair',
-              'Water Main Install or Repair',
-              'Sewer Main Install or Replace',
-              'Drain Line Breakage Camera Locate'
-            ]
-          },
-          {
-            title: 'Water Treatment Systems',
-            list: [
-              'Water Treatment & Purification Install',
-              'Water Treatment & Purification Repair'
-            ]
-          },
-          {
-            title: 'Floor Repair & Restoration',
-            list: [
-              'Emergency Flood Repair',
-              'Water Removal & Extraction',
-              'Mold Remediation',
-              'Damage Repair & Restoration'
-            ]
-          }
-        ],
-        areas: [
+export default {
+  name: "Services",
+  data() {
+    return {
+      service: "Plumbing, Sewer & Drain Cleaning Services",
+      description: [
+        "Five Star Service Pros has the experience and expertise to offer affordable, reliable, and professional service in all areas of plumbing, sewer, and drain cleaning services.",
+        "Whether it's a leaky kitchen sink or a backed up drainage system, we are here to provide immediate and trustworthy service at every step of the job. With 24/7 service and pricing by the job, not the hour, you can always count on Five Star Service Pros to provide you with reliable and predictable service.",
+        "Let us give you the best treatment in Boise. Listed below are just a few of our specialties:"
+      ],
+      specificServices: [
         {
-          title: 'Boise',
-          neighborhoods: [
-            'Boise Bench',
-            'Boise Heights',
-            'Boise State University',
-            'Central Bench',
-            'Columbia Village',
-            'Depot Bench',
-            'Downtown Boise',
-            'East End',
-            'Garden City',
-            'Harris Ranch',
-            'Hidden Springs',
-            'Highlands',
-            'Hillcrest',
-            'North End',
-            'Northeast Boise',
-            'Northwest Boise',
-            'Quail Ridge',
-            'South Boise',
-            'South Boise Village',
-            'Southeast Boise',
-            'Sunset',
-            'Warm Springs',
-            'Warm Springs Mesa',
-            'West Boise',
-            'West End'
+          title: "Excavation",
+          list: ["Water & Fuel Tank Installation", "Water & Fuel Tank Removal"]
+        },
+        {
+          title: "Foundations",
+          list: ["Basement Drainage Channels Repair"]
+        },
+        {
+          title: "Plumbing",
+          list: [
+            "Clear Sewer Main",
+            "Faucets, Fixtures and Pipe Repair",
+            "Water Heater Install",
+            "Water Heater Repair",
+            "Gas Piping",
+            "Clear Drain Clog or Blockage",
+            "Sump Pump or Foundation Drain Install",
+            "Sump Pump Repair",
+            "Tankless Water Heater Install",
+            "Tankless Water Heater Repair",
+            "Water Main Install or Repair",
+            "Sewer Main Install or Replace",
+            "Drain Line Breakage Camera Locate"
           ]
-        }]
-      }
-    },
-    metaInfo: {
-      meta: [
-        {name: 'description', content: 'Five Star Service Pros has experience and expertise in all areas of plumbing, sewer, and drain cleaning services. Let us give you the best treatment in Boise.'}
+        },
+        {
+          title: "Water Treatment Systems",
+          list: [
+            "Water Treatment & Purification Install",
+            "Water Treatment & Purification Repair"
+          ]
+        },
+        {
+          title: "Floor Repair & Restoration",
+          list: [
+            "Emergency Flood Repair",
+            "Water Removal & Extraction",
+            "Mold Remediation",
+            "Damage Repair & Restoration"
+          ]
+        }
+      ],
+      areas: [
+        {
+          title: "Boise",
+          neighborhoods: [
+            "Boise Bench",
+            "Boise Heights",
+            "Boise State University",
+            "Central Bench",
+            "Columbia Village",
+            "Depot Bench",
+            "Downtown Boise",
+            "East End",
+            "Garden City",
+            "Harris Ranch",
+            "Hidden Springs",
+            "Highlands",
+            "Hillcrest",
+            "North End",
+            "Northeast Boise",
+            "Northwest Boise",
+            "Quail Ridge",
+            "South Boise",
+            "South Boise Village",
+            "Southeast Boise",
+            "Sunset",
+            "Warm Springs",
+            "Warm Springs Mesa",
+            "West Boise",
+            "West End"
+          ]
+        }
       ]
-    }
+    };
+  },
+  metaInfo: {
+    title: "Five Star Service Pros",
+    titleTemplate:
+      "%s - Services",
+    meta: [
+      {
+        name: "description",
+        content:
+          "Five Star Service Pros has experience and expertise in all areas of plumbing, sewer, and drain cleaning services. Let us give you the best treatment in Boise."
+      }
+    ]
   }
+};
 </script>
