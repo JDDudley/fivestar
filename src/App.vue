@@ -204,7 +204,7 @@ export default {
   methods: {
     appointmentSubmit() {
       if (this.$refs.appointmentForm.validate()) {
-        axios.post("//formspree.io/service@fivestarboise.com", {
+        axios.post("//formspree.io/holly@fivestarboise.com", {
           name: this.name,
           phone: this.phone
         });
