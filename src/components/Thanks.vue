@@ -16,6 +16,7 @@
       title: 'Thank You!'
     }),
     metaInfo: {
+      title: 'Five Star Service Pros - Thank You!',
       meta: [
         {name: 'description', content: 'Thanks for contacting Five Star Service Pros! You\'re about to hear back from the most reliable plumbers in Boise.'}
       ]

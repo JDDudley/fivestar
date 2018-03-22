@@ -195,7 +195,7 @@ export default {
       },
       {
         title: "Flood Repair",
-        route: "/services/flood-repair"
+        route: "/services/flood-repair/"
       }
     ],
     successAppSnack: false,

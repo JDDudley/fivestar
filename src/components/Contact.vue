@@ -73,6 +73,7 @@
       successTimeout: 5000
     }),
     metaInfo: {
+      title: 'Five Star Service Pros - Contact Us',
       meta: [
         {name: 'description', content: 'Contact Five Star Service Pros for honest and reliable answers to all your plumbing and sewer needs. We charge by the job, not the hour, so your bill will never surprise you.'}
       ]

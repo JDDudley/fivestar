@@ -78,6 +78,7 @@
       }
     },
     metaInfo: {
+      title: 'Five Star Service Pros - Commercial Plumbing',
       meta: [
         {name: 'description', content: 'Five Star serves numerous local businesses as the most reliable on-call plumber in the valley. Let us provide the assurance that you\'ll always have immediate fixes to any commercial plumbing problems that come up.'}
       ]

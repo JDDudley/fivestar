@@ -82,6 +82,7 @@
       }
     },
     metaInfo: {
+      title: 'Five Star Service Pros - Residential Plumbing',
       meta: [
         {name: 'description', content: 'Five Star Plumbing has the most reliable service in the Treasure Valley for all your residential plumbing needs. Kitchen, bath, laundry, and everything in between. Let us provide the service you deserve.'}
       ]

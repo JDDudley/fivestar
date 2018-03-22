@@ -16,7 +16,10 @@
     name: 'NotFound',
     data: () => ({
       title: 'Page Not Found'
-    })
+    }),
+    metaInfo: {
+      title: 'Five Star Service Pros - Page Not Found'
+    }
   }
 </script>
 
