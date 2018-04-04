@@ -10,7 +10,7 @@
       <p>All services are performed by experienced plumbers with years of experience in every area of the plumbing and pipe
         service trade. Whether it's a kitchen sink replacement or a complete drain cleaning service, you can feel confident
         that our plumbing services are performed in the quickest, safest, and most effective manner.</p>
-      <h2>Who is Five Star Service Pros?</h2>
+      <h2>Who Are Five Star Service Pros?</h2>
       <p>Five Star Service Pros is a local female-owned company with extensive experience in all areas of residential and commercial
         plumbing. Quality training, experience, and equipment are critical to ensuring that our customers receive the highest-level
         service on every job.</p>

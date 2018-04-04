@@ -5,7 +5,7 @@
       <v-icon color="white">phone</v-icon> (208) 260-1765
     </v-btn>
     <br><br>
-    <p>Five Star Service Pros is committed to servicing your plumbing and drain cleaning needs in a timely and cost-efficient manner. Contact us today to set up your free quote!</p>
+    <p>Five Star Service Pros is committed to servicing your plumbing, sewer, flood, and drain cleaning needs in a timely and cost-efficient manner. Contact us today to set up your free quote!</p>
     <div class="form-div">
       <v-form v-model="valid" ref="form" lazy-validation>
         <v-text-field
