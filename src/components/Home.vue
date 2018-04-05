@@ -40,15 +40,15 @@
     <v-container grid-list-md>
       <v-layout row wrap>
         <v-flex xs4 text-xs-center>
-          <a href="http://www.homeadvisor.com/c.Plumbing.Boise.ID.-12058.html#spid=61604027"><img alt="Top Rated Contractor - 5 Star Service Pros, LLC" src="http://www.homeadvisor.com/images/sp-badges/toprated-solid-border.png?sp=61604027&key=29a3cd3c7e116acee983f0a2a3439c88"
+          <a href="http://www.homeadvisor.com/c.Plumbing.Boise.ID.-12058.html#spid=61604027"><img class="ha-badge" alt="Top Rated Contractor - 5 Star Service Pros, LLC" src="http://www.homeadvisor.com/images/sp-badges/toprated-solid-border.png?sp=61604027&key=29a3cd3c7e116acee983f0a2a3439c88"
             /></a>
         </v-flex>
         <v-flex xs4 text-xs-center>
-          <a href="http://www.homeadvisor.com/c.Plumbing.Boise.ID.-12058.html#spid=61604027"><img alt="5 Star Service Pros, LLC - HomeAdvisor Elite Service" src="http://www.homeadvisor.com/images/sp-badges/elite-solid-border.png?sp=61604027&key=29a3cd3c7e116acee983f0a2a3439c88"
+          <a href="http://www.homeadvisor.com/c.Plumbing.Boise.ID.-12058.html#spid=61604027"><img class="ha-badge" alt="5 Star Service Pros, LLC - HomeAdvisor Elite Service" src="http://www.homeadvisor.com/images/sp-badges/elite-solid-border.png?sp=61604027&key=29a3cd3c7e116acee983f0a2a3439c88"
             /></a>
         </v-flex>
         <v-flex xs4 text-xs-center>
-          <a href="http://www.homeadvisor.com/rated.5StarServiceProsLLC.61604027.html"><img alt="Rated & Reviewed HomeAdvisor Pro" src="http://www.homeadvisor.com/images/sp-badges/soap-solid-border.png?sp=61604027&key=29a3cd3c7e116acee983f0a2a3439c88"
+          <a href="http://www.homeadvisor.com/rated.5StarServiceProsLLC.61604027.html"><img class="ha-badge" alt="Rated & Reviewed HomeAdvisor Pro" src="http://www.homeadvisor.com/images/sp-badges/soap-solid-border.png?sp=61604027&key=29a3cd3c7e116acee983f0a2a3439c88"
             /></a>
         </v-flex>
       </v-layout>
@@ -129,5 +129,8 @@ export default {
   h1,
   h2 {
     font-weight: normal;
+  }
+  .ha-badge {
+    max-width: 100%;
   }
 </style>
