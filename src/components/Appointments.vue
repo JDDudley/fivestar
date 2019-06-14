@@ -104,9 +104,6 @@ export default {
     clear() {
       this.$refs.form.reset();
     }
-  },
-  created: function() {
-    fbq("track", "Lead");
   }
 };
 </script>
